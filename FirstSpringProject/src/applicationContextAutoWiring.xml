@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Bean Properties can be directly specified as follows -->
+	<bean id="parentClass1" class="com.javatpoint.autowiring.ParentClass" autowire="byName">
+		<property name="parentData" value="007"></property>
+	</bean>
+	<!-- byName takes into account the name of the variable in the class and the bean id defined within this file
+	In this case it maps the childClass attribute of Parent class to the childClass bean id defined below -->
+	
+	<bean id="childClass" class="com.javatpoint.autowiring.ChildClass">
+	<property name="childData" value="009"></property>
+	</bean>
+	  
+</beans>  
